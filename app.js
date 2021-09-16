@@ -13,7 +13,7 @@ app.post("/send",
   check('name').isLength({ min: 3,max:20 }).withMessage( 'Name should be 3 to 20 characters.'),
   check('email').isEmail().withMessage( 'Not a valid email.'),
   check('subject').isLength({ min: 3,max:200 }).withMessage( 'Subject should be more than more than 3 characters.'),
-  check('message').isLength({ min: 3, max:2000 }).withMessage( 'Message should be more than characters.'),
+  check('message').isLength({ min: 3, max:2000 }).withMessage( 'Message should be more than 3 characters.'),
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
