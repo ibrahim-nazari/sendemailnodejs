@@ -37,7 +37,7 @@ app.post("/send",
   
    await transporter.sendMail({
     from: '"designerscf.com" <designerscut@designerscf.com>', 
-    to: "ibrahimnazaryweb@gmail.com", 
+    to: "designerscut@cox.net", 
     subject: subject, 
     text: "",
     html: out, 
