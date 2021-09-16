@@ -16,6 +16,10 @@ app.post("/send",
   check('message').isLength({ min: 3, max:2000 }).withMessage( 'Message should be more than 3 characters.'),
   async (req, res) => {
     const errors = validationResult(req);
+    var origin = req.get('origin');
+    if(origin !="https://www.designerscf.com"){
+      return res.status(400).json({ message: "not allowed",error:true });
+    }
     if (!errors.isEmpty()) {
       return res.status(400).json({ message: errors.array(),error:true });
     }
@@ -46,10 +50,6 @@ app.post("/send",
     html: out, 
   });
   
-  var host = req.get('host');
-var origin = req.get('origin');
-  console.log("origin",origin)
-  console.log("host",host)
   return res.status(200).json({message:"success",error:false})
   } catch (error) {
       res.status(500).json({message:error.message,error:true})
