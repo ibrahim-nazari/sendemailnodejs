@@ -31,10 +31,6 @@ app.post("/send",
       user: process.env.USER_EMAIL, 
       pass: process.env.USER_PASSWORD,
     },
-    tls: {
-      
-        rejectUnauthorized: false,
-      },
   });
 
   let out=`<div><strong>First Names:  ${name}</strong></div><br/><div><strong>Phone :  ${phone}</strong></div><br/><div style="margin-top:'12px',margin-bottom:'12px'"><strong>Email:  ${email}</strong></div><hr/><div>${message}</div>`
