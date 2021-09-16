@@ -6,6 +6,9 @@ const app=express();
 app.use(cors())
 require('dotenv').config();
 app.use(express.json());
+app.get("/",(req,res)=>{
+  return res.status(200).send("welcome")
+})
 app.post("/send", 
   check('firstName').isLength({ min: 3,max:20 }).withMessage( 'First Name should be 3 to 20 characters.'),
   check('email').isEmail().withMessage( 'Not a valid email.'),
