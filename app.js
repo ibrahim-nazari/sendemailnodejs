@@ -45,7 +45,9 @@ app.post("/send",
     text: "",
     html: out, 
   });
-  return res.status(200).json({message:"success",error:false})
+  var origin = req.get('origin');
+  
+  return res.status(200).json({message:origin,error:false})
   } catch (error) {
       res.status(500).json({message:error.message,error:true})
   }
