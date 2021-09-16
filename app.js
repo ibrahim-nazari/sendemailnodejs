@@ -36,7 +36,7 @@ app.post("/send",
   let out=`<div><strong>First Names:  ${name}</strong></div><br/><div><strong>Phone :  ${phone}</strong></div><br/><div style="margin-top:'12px',margin-bottom:'12px'"><strong>Email:  ${email}</strong></div><hr/><div>${message}</div>`
   
    await transporter.sendMail({
-    from: '"Designercut Contact Form" <ibrahim.nazari@designerscf.com>', 
+    from: '"designerscf.com" <designerscf@designerscf.com>', 
     to: "ibrahimnazaryweb@gmail.com", 
     subject: subject, 
     text: "",
