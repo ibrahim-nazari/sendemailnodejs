@@ -53,5 +53,5 @@ app.post("/send",
  
   
 })
-
-app.listen(5000,()=>console.log("ok"))
+const port = process.env.PORT || 3000
+app.listen(port,()=>console.log("ok"))
