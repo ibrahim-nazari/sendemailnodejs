@@ -26,7 +26,7 @@ app.post("/send",
   let transporter = nodemailer.createTransport({
     host: process.env.SMTP,
     port: 587,
-    secure: false, 
+    secure: true, 
     auth: {
       user: process.env.USER_EMAIL, 
       pass: process.env.USER_PASSWORD,
@@ -37,7 +37,7 @@ app.post("/send",
   
    await transporter.sendMail({
     from: '"designerscf.com" <designerscut@designerscf.com>', 
-    to: "designerscut@cox.net", 
+    to: "ibrahimnazaryweb@gmail.com", 
     subject: subject, 
     text: "",
     html: out, 
