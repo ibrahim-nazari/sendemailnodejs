@@ -43,7 +43,9 @@ app.post(
         },
       });
 
-      let out = `<div><strong>First Names:  ${name} ${lastName}</strong></div><br/><div><strong>Phone :  ${phone}</strong></div><br/><div style="margin-top:'12px',margin-bottom:'12px'"><strong>Email:  ${email}</strong></div><hr/><div>${message}</div>`;
+      let out = `<div><strong>First Names:  ${name} ${
+        lastName ? lastName : " "
+      }</strong></div><br/><div><strong>Phone :  ${phone}</strong></div><br/><div style="margin-top:'12px',margin-bottom:'12px'"><strong>Email:  ${email}</strong></div><hr/><div>${message}</div>`;
 
       await transporter.sendMail({
         from: process.env.FROMEMAIL,
