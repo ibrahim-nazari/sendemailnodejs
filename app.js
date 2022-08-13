@@ -50,7 +50,7 @@ app.post(
       await transporter.sendMail({
         from: process.env.FROMEMAIL,
         to: process.env.SENDTO,
-        subject: `${name} ${lastName}`,
+        subject: `${name} ${lastName ? lastName : ""} sent you a message`,
         text: "",
         html: out,
       });
