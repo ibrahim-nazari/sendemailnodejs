@@ -43,7 +43,7 @@ app.post(
         },
       });
 
-      let out = `<div><strong>First Names:  ${name} ${
+      let out = `<div><strong>Surname:  ${name} ${
         lastName ? lastName : " "
       }</strong></div><br/><div><strong>Phone :  ${phone}</strong></div><br/><div style="margin-top:'12px',margin-bottom:'12px'"><strong>Email:  ${email}</strong></div><hr/><div>${message}</div>`;
 
