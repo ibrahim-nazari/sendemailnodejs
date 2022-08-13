@@ -48,7 +48,7 @@ app.post(
       }</strong></div><br/><div><strong>Phone :  ${phone}</strong></div><br/><div style="margin-top:'12px',margin-bottom:'12px'"><strong>Email:  ${email}</strong></div><hr/><div>${message}</div>`;
 
       await transporter.sendMail({
-        from: process.env.FROMEMAIL,
+        from: `manawoodllc.com  <${process.env.FROMEMAIL}>`,
         to: process.env.SENDTO,
         subject: `${name} ${lastName ? lastName : ""} sent you a message`,
         text: "",
