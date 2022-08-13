@@ -55,6 +55,7 @@ app.post(
 
       return res.status(200).json({ message: "success", error: false });
     } catch (error) {
+      console.log("error", error);
       res.status(500).json({ message: error.message, error: true });
     }
   }
