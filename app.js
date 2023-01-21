@@ -22,9 +22,10 @@ app.post(
     const errors = validationResult(req);
     var origin = req.get("origin");
     console.log("origin===>", origin);
-    if (origin != process.env.ORIGIN) {
-      return res.status(400).json({ message: "not allowed", error: true });
-    }
+    // http://localhost:3000
+    // if (origin != process.env.ORIGIN) {
+    //   return res.status(400).json({ message: "not allowed", error: true });
+    // }
     if (!errors.isEmpty()) {
       return res.status(400).json({ message: errors.array(), error: true });
     }
