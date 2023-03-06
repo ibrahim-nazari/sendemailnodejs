@@ -1,7 +1,7 @@
 # Send email with node mailer using node.js
 
 
-##Enviroment variables 
+## Enviroment variables 
 
 ### FROMEMAIL
 example:  ex@domain.com
