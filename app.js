@@ -21,8 +21,8 @@ app.post(
   async (req, res) => {
     const errors = validationResult(req);
     var origin = req.get("origin");
-    console.log("origin ===", origin);
-    if (origin != process.env.ORIGIN) {
+
+    if (!origin.includes(process.env.ORIGIN)) {
       return res.status(400).json({ message: "not allowed", error: true });
     }
     if (!errors.isEmpty()) {
